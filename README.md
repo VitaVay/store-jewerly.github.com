@@ -1,2 +1,2 @@
-store-jewerly.github.io
+store-jewerly.github.com
 
