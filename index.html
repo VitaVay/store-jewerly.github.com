@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Jewelry - Украшения ручной работы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Handmade Jewelry</h1>
+        <p>Уникальные украшения ручной работы</p>
+    </header>
+    
+    <nav>
+        <a href="#" onclick="showPage('home')">Главная</a>
+        <a href="#" onclick="showPage('catalog')">Каталог</a>
+    </nav>
+    
+    <div class="container">
+        <!-- Главная страница-приветствие -->
+        <div id="home" class="page active">
+            <section class="welcome-section">
+                <h2>Добро пожаловать в наш мир украшений</h2>
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <p>Каждое изделие в нашей коллекции создается вручную с любовью и вниманием к деталям. Мы используем только натуральные материалы и качественную фурнитуру.</p>
+                        <p>Наши украшения - это не просто аксессуары, это маленькие произведения искусства, которые подчеркнут вашу индивидуальность.</p>
+                        <a href="#" onclick="showPage('catalog')" class="btn">Посмотреть каталог</a>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Мастер за работой">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="features">
+                <h3>Почему выбирают нас</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✧</div>
+                        <h4>Уникальность</h4>
+                        <p>Каждое украшение существует в единственном экземпляре</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♻</div>
+                        <h4>Экоматериалы</h4>
+                        <p>Используем только безопасные и качественные материалы</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✉</div>
+                        <h4>Индивидуальность</h4>
+                        <p>Возможность создания украшений по вашему эскизу</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Страница каталога -->
+        <div id="catalog" class="page">
+            <h2>Наш каталог</h2>
+            <div class="category-filter">
+                <button class="filter-btn active">Все</button>
+                <button class="filter-btn">Кольца</button>
+                <button class="filter-btn">Серьги</button>
+                <button class="filter-btn">Браслеты</button>
+                <button class="filter-btn">Подвески</button>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card" data-category="кольца">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Серебряное кольцо" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Серебряное кольцо с камнем</h3>
+                        <p class="product-category">Кольца</p>
+                        <p class="product-price">2,500 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="серьги">
+                    <img src="data:image/jpeg;base64,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" alt="Золотые серьги" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Золотые серьги с жемчугом</h3>
+                        <p class="product-category">Серьги</p>
+                        <p class="product-price">4,800 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="браслеты">
+                    <img src="https://angelskaya925.com/image/cache/catalog/875/875_1_1-1900x800s.jpg" alt="Кожаный браслет" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Кожаный браслет с серебром</h3>
+                        <p class="product-category">Браслеты</p>
+                        <p class="product-price">3,200 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="подвески">
+                    <img src="https://beloptovik.by/upload/resize_cache/iblock/841/9q3izwr9tor0jgxhoy3mmzvj2imno0b4/1278_1278_12110b03840b7e21713ecbddec31c69cd/%D0%B4%D0%B5%D1%80%20%D1%81%D1%80%20%D0%B7%209.jpg" alt="Подвеска" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Подвеска "Древо жизни"</h3>
+                        <p class="product-category">Подвески</p>
+                        <p class="product-price">2,900 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="кольца">
+                    <img src="https://ae04.alicdn.com/kf/S791b2b811a074013917223dc84215aae2.jpg" alt="Кольцо с опалом" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Кольцо с опалом</h3>
+                        <p class="product-category">Кольца</p>
+                        <p class="product-price">3,700 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="серьги">
+                    <img src="https://gc.ourgold.ru/images/public/goods/61/936/61936/z8UxupRVmg2YhXRcZCRAzT1GTpvaX9iG4gLOsxAP.jpg" alt="Серьги-гвоздики" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Серьги-гвоздики с фианитами</h3>
+                        <p class="product-category">Серьги</p>
+                        <p class="product-price">2,100 руб.</p>
+                        <a href="#" class="btn">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Handmade Jewelry. Все права защищены.</p>
+        <p>Контактный телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@handmade-jewelry.ru</p>
+    </footer>
+    
+    <script>
+        function showPage(pageId) {
+            // Скрыть все страницы
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Показать выбранную страницу
+            document.getElementById(pageId).classList.add('active');
+            
+            // Прокрутить вверх
+            window.scrollTo(0, 0);
+        }
+
+        // Фильтрация товаров
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Удаляем active у всех кнопок
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Добавляем active к текущей кнопке
+                this.classList.add('active');
+                
+                const category = this.textContent.toLowerCase();
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (category === 'все' || product.dataset.category === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
